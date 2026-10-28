@@ -1,5 +1,8 @@
 2026 부산 문화다양성 주간 아카이빙 웹진
 
+공개 주소
+https://bscfdiversity.github.io/diversity-webzine/
+
 GitHub Desktop 업로드 방법
 1. 이 ZIP 파일을 먼저 압축 해제합니다.
 2. webzine-final-light 폴더 안의 index.html, pages, videos, images, fonts를 모두 선택합니다.

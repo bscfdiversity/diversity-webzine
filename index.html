@@ -8,9 +8,9 @@
   <meta property="og:title" content="2026 부산 문화다양성 주간 아카이빙 웹진">
   <meta property="og:description" content="문화다양성 주간의 전시·공연·토크·체험·캠페인을 기록합니다.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wldbs020812-cpu.github.io/diversity-webzine/">
-  <meta property="og:image" content="https://wldbs020812-cpu.github.io/diversity-webzine/pages/page01.jpg?v=3">
-  <meta property="og:image:secure_url" content="https://wldbs020812-cpu.github.io/diversity-webzine/pages/page01.jpg?v=3">
+  <meta property="og:url" content="https://bscfdiversity.github.io/diversity-webzine/">
+  <meta property="og:image" content="https://bscfdiversity.github.io/diversity-webzine/pages/page01.jpg?v=3">
+  <meta property="og:image:secure_url" content="https://bscfdiversity.github.io/diversity-webzine/pages/page01.jpg?v=3">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1500">
   <meta property="og:image:height" content="2000">
@@ -32,7 +32,8 @@
     .nav-zone{position:fixed;top:0;bottom:0;z-index:10;width:80px;padding:0;background:transparent;cursor:pointer}
     .nav-zone.prev{left:0;cursor:w-resize}
     .nav-zone.next{right:0;cursor:e-resize}
-    .nav-arrow{position:absolute;top:50%;display:grid;place-items:center;width:50px;height:50px;border:1px solid rgba(255,255,255,.42);border-radius:50%;background:rgba(23,16,24,.78);box-shadow:0 5px 20px rgba(0,0,0,.28);color:#fff;font-family:Arial,sans-serif;font-size:40px;font-weight:300;line-height:1;opacity:1;transform:translateY(-50%);transition:transform .18s ease,background .18s ease}
+    .nav-arrow{position:absolute;top:calc(50% - 8px);display:grid;place-items:center;width:50px;height:50px;padding:0;border:1px solid rgba(255,255,255,.42);border-radius:50%;background:rgba(23,16,24,.78);box-shadow:0 5px 20px rgba(0,0,0,.28);color:#fff;opacity:1;transform:translateY(-50%);transition:transform .18s ease,background .18s ease}
+    .nav-arrow svg{display:block;width:18px;height:28px;overflow:visible}
     .prev .nav-arrow{left:20px}.next .nav-arrow{right:20px}
     .nav-zone:hover .nav-arrow,.nav-zone:focus-visible .nav-arrow{background:rgba(215,68,241,.92);transform:translateY(-50%) scale(1.06)}
     .nav-zone:disabled{cursor:default}.nav-zone:disabled .nav-arrow{display:none}
@@ -43,8 +44,8 @@
     .round-button{display:grid;place-items:center;width:46px;padding:0;border-radius:50%;color:#fff;cursor:pointer}
     .menu-icon{font-family:Arial,sans-serif;font-size:23px;line-height:1}
     .video-card{position:absolute;z-index:20;padding:0;border:0;background:transparent;cursor:pointer}
-    .video-card.teaser-card{left:16.5%;top:9.5%;width:22%;height:22%}
-    .video-card.sketch-card{left:59%;top:58.5%;width:34%;height:18%}
+    .video-card.teaser-card{left:16.5%;top:10.3%;width:17.5%;height:22.2%}
+    .video-card.sketch-card{left:60%;top:64.2%;width:31%;height:15%}
     .video-card[hidden]{display:none}
     .video-card > *{display:none!important}
     .video-card::after{content:"▶";position:absolute;top:50%;left:50%;display:grid;place-items:center;width:58px;height:58px;padding-left:4px;border:1px solid rgba(255,255,255,.55);border-radius:50%;background:rgba(23,16,24,.72);box-shadow:0 5px 18px rgba(0,0,0,.28);color:#fff;font-family:Arial,sans-serif;font-size:24px;line-height:1;transform:translate(-50%,-50%);transition:background .18s ease,transform .18s ease}
@@ -69,7 +70,7 @@
     .modal-video{position:relative;z-index:2;display:block;width:auto;max-width:min(1180px,92vw);height:auto;max-height:82vh;background:#000;box-shadow:0 16px 60px rgba(0,0,0,.55)}
     .modal-close{position:absolute;top:max(18px,env(safe-area-inset-top));right:max(18px,env(safe-area-inset-right));z-index:3;display:grid;place-items:center;width:48px;height:48px;border:1px solid rgba(255,255,255,.36);border-radius:50%;background:rgba(0,0,0,.45);color:#fff;font-family:Arial,sans-serif;font-size:34px;cursor:pointer}
     .modal-help{position:absolute;bottom:max(17px,env(safe-area-inset-bottom));left:50%;z-index:3;margin:0;font-size:14px;opacity:.72;transform:translateX(-50%);white-space:nowrap}
-    @media(max-width:700px){.nav-zone{top:auto;bottom:max(20px,env(safe-area-inset-bottom));width:64px;height:48px}.nav-zone.prev{left:8px}.nav-zone.next{right:8px}.nav-arrow{top:50%;width:auto;height:auto;border:0;border-radius:0;background:transparent;box-shadow:none;font-size:0;opacity:.78;transform:translateY(-50%)}.nav-zone:hover .nav-arrow,.nav-zone:focus-visible .nav-arrow{background:transparent;transform:translateY(-50%)}.prev .nav-arrow{left:14px}.next .nav-arrow{right:14px}.prev .nav-arrow::before{content:"←";font-size:18px}.next .nav-arrow::before{content:"→";font-size:18px}.topbar{top:max(10px,env(safe-area-inset-top));right:max(10px,env(safe-area-inset-right));gap:6px}.page-counter,.round-button{height:40px}.round-button{width:40px}.page-counter{padding:0 12px;font-size:14px}.menu-panel{padding:22px;box-shadow:8px 8px 0 rgba(215,68,241,.88)}.menu-title{font-size:24px}.toc-button{grid-template-columns:38px 1fr 22px;padding:15px 2px}.toc-label{font-size:16px}.video-card{border-width:1px}.video-card::after{width:44px;height:44px;padding-left:3px;font-size:18px}.video-thumb-wrap,.video-label{border-width:1px}.modal-help{display:none}}
+    @media(max-width:700px){.nav-zone{top:auto;bottom:max(20px,env(safe-area-inset-bottom));width:64px;height:48px}.nav-zone.prev{left:8px}.nav-zone.next{right:8px}.nav-arrow{top:50%;width:auto;height:auto;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;font-size:0;opacity:.78;transform:translateY(-50%)}.nav-arrow svg{display:none}.nav-zone:hover .nav-arrow,.nav-zone:focus-visible .nav-arrow{background:transparent;transform:translateY(-50%)}.prev .nav-arrow{left:14px}.next .nav-arrow{right:14px}.prev .nav-arrow::before{content:"←";font-size:18px;line-height:1}.next .nav-arrow::before{content:"→";font-size:18px;line-height:1}.topbar{top:max(10px,env(safe-area-inset-top));right:max(10px,env(safe-area-inset-right));gap:6px}.page-counter,.round-button{height:40px}.round-button{width:40px}.page-counter{padding:0 12px;font-size:14px}.menu-panel{padding:22px;box-shadow:8px 8px 0 rgba(215,68,241,.88)}.menu-title{font-size:24px}.toc-button{grid-template-columns:38px 1fr 22px;padding:15px 2px}.toc-label{font-size:16px}.video-card{border-width:1px}.video-card::after{width:44px;height:44px;padding-left:3px;font-size:18px}.video-thumb-wrap,.video-label{border-width:1px}.modal-help{display:none}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
   </style>
 </head>
@@ -82,8 +83,8 @@
     </div>
   </main>
 
-  <button class="nav-zone prev" id="previous-button" type="button" aria-label="이전 페이지"><span class="nav-arrow" aria-hidden="true">‹</span></button>
-  <button class="nav-zone next" id="next-button" type="button" aria-label="다음 페이지"><span class="nav-arrow" aria-hidden="true">›</span></button>
+  <button class="nav-zone prev" id="previous-button" type="button" aria-label="이전 페이지"><span class="nav-arrow" aria-hidden="true"><svg viewBox="0 0 18 28" focusable="false"><path d="M13 4 5 14l8 10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+  <button class="nav-zone next" id="next-button" type="button" aria-label="다음 페이지"><span class="nav-arrow" aria-hidden="true"><svg viewBox="0 0 18 28" focusable="false"><path d="m5 4 8 10-8 10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
 
   <div class="topbar">
     <div class="page-counter" aria-live="polite"><span id="current-page">1</span><span>/</span><span class="total">51</span></div>
