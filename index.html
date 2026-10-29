@@ -12,8 +12,8 @@
   <meta property="og:image" content="https://bscfdiversity.github.io/diversity-webzine/pages/page01.jpg?v=3">
   <meta property="og:image:secure_url" content="https://bscfdiversity.github.io/diversity-webzine/pages/page01.jpg?v=3">
   <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1500">
-  <meta property="og:image:height" content="2000">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="3200">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#1b1220">
   <style>
@@ -77,7 +77,7 @@
 <body>
   <main class="viewer" aria-label="문화다양성 아카이빙 웹진">
     <div class="page-stage" id="page-stage">
-      <img class="page-image" id="page-image" src="pages/page01.jpg" alt="웹진 1페이지">
+      <img class="page-image" id="page-image" src="pages/page01.jpg" alt="웹진 1페이지" decoding="async" fetchpriority="high">
       <button class="video-card teaser-card" type="button" data-video="teaser" aria-label="2026 부산문화다양성 주간 티저영상 재생" hidden></button>
       <button class="video-card sketch-card" type="button" data-video="sketch" aria-label="문화다양성 주간행사 스케치 영상 재생" hidden></button>
     </div>
@@ -135,7 +135,7 @@
     const modalClose=document.getElementById("modal-close");
 
     function fileName(page){return `pages/page${String(page).padStart(2,"0")}.jpg`}
-    function sizeStage(){const ratio=2000/2667;let height=innerHeight,width=height*ratio;if(width>innerWidth){width=innerWidth;height=width/ratio}pageStage.style.width=`${width}px`;pageStage.style.height=`${height}px`}
+    function sizeStage(){const ratio=3/4;let height=innerHeight,width=height*ratio;if(width>innerWidth){width=innerWidth;height=width/ratio}pageStage.style.width=`${width}px`;pageStage.style.height=`${height}px`}
     function preload(index){const slide=slides[index];if(!slide)return;const image=new Image();image.src=fileName(slide.page)}
     function updateVideoCards(slide){videoCards.forEach(card=>card.hidden=slide.page!==6)}
     function showSlide(index){currentSlide=Math.max(0,Math.min(slides.length-1,index));const slide=slides[currentSlide];pageImage.src=fileName(slide.page);pageImage.alt=`웹진 ${slide.page}페이지`;pageNumber.textContent=slide.page;previousButton.disabled=currentSlide===0;nextButton.disabled=currentSlide===slides.length-1;updateVideoCards(slide);preload(currentSlide-1);preload(currentSlide+1);history.replaceState(null,"",`#page=${slide.page}`)}
